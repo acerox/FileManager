@@ -1,13 +1,22 @@
 package me.acerox.filemanager.option;
 
-public class OptionReadSearch extends OptionRead {
+import me.acerox.filemanager.ReadWrite;
 
-    protected OptionReadSearch(String title) {
-        super(title);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class OptionReadSearch extends Option {
+
+    public OptionReadSearch(ReadWrite readWrite) {
+        super("Search word in the file", readWrite);
     }
 
     @Override
-    public void init() {
+    public void init() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String word = reader.readLine();
 
+        System.out.println(readWrite.getValue(word) + " word found!!");
     }
 }

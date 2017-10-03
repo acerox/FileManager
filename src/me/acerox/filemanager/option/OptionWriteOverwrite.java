@@ -1,9 +1,11 @@
 package me.acerox.filemanager.option;
 
-public class OptionWriteOverwrite extends OptionWrite {
+import me.acerox.filemanager.ReadWrite;
 
-    protected OptionWriteOverwrite(String title) {
-        super(title);
+public class OptionWriteOverwrite extends Option {
+
+    public OptionWriteOverwrite(ReadWrite readWrite) {
+        super("Write text and overwrite", readWrite);
     }
 
     @Override

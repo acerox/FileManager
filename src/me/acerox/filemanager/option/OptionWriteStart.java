@@ -1,9 +1,11 @@
 package me.acerox.filemanager.option;
 
-public class OptionWriteStart extends OptionWrite {
+import me.acerox.filemanager.ReadWrite;
 
-    protected OptionWriteStart(String title) {
-        super(title);
+public class OptionWriteStart extends Option {
+
+    public OptionWriteStart(ReadWrite readWrite) {
+        super("Write text at start", readWrite);
     }
 
     @Override

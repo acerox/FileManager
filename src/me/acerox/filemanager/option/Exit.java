@@ -5,7 +5,7 @@ public class Exit extends Option {
     private boolean exit = false;
 
     public Exit() {
-        super("Exit");
+        super("Exit", null);
     }
 
     @Override

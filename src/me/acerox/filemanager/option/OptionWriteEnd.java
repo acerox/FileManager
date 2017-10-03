@@ -1,9 +1,11 @@
 package me.acerox.filemanager.option;
 
-public class OptionWriteEnd extends OptionWrite {
+import me.acerox.filemanager.ReadWrite;
 
-    protected OptionWriteEnd(String title) {
-        super(title);
+public class OptionWriteEnd extends Option {
+
+    public OptionWriteEnd(ReadWrite readWrite) {
+        super("Append file to text", readWrite);
     }
 
     @Override
