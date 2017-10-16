@@ -13,18 +13,6 @@ public class Menu {
     private Exit exit = new Exit();
     private int number = 0;
 
-/*
-    private String[] options = {
-            "Open file",
-            "Read file",
-            "Read registry line",
-            "Search",
-            "Write on start",
-            "Write to end",
-            "Overwrite"
-    };
-*/
-
     public void add(Option option) {
         options[number] = option;
         number++;

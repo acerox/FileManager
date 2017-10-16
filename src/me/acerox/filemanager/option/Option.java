@@ -1,6 +1,6 @@
 package me.acerox.filemanager.option;
 
-import me.acerox.filemanager.ReadWrite;
+import me.acerox.filemanager.SequentialFile;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,11 +9,11 @@ import java.io.InputStreamReader;
 public abstract class Option {
 
     protected final String title;
-    protected ReadWrite readWrite;
+    protected SequentialFile sequentialFile;
 
-    protected Option(String title, ReadWrite readWrite) {
+    protected Option(String title, SequentialFile sequentialFile) {
         this.title = title;
-        this.readWrite = readWrite;
+        this.sequentialFile = sequentialFile;
     }
 
     public void display(int position) {

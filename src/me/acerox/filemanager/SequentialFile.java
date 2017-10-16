@@ -3,14 +3,14 @@ package me.acerox.filemanager;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class ReadWrite {
+public class SequentialFile {
 
     private String fileLocation;
 
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
 
-    public ReadWrite(String fileLocation) {
+    public SequentialFile(String fileLocation) {
         this.fileLocation = fileLocation;
     }
 

@@ -2,7 +2,7 @@ package me.acerox.filemanager;
 
 import me.acerox.filemanager.option.OptionReadSearch;
 import me.acerox.filemanager.option.OptionWriteEnd;
-import me.acerox.filemanager.option.OptionWriteOverwrite;
+import me.acerox.filemanager.option.OptionOverwrite;
 import me.acerox.filemanager.option.OptionWriteStart;
 
 import java.io.IOException;
@@ -10,15 +10,15 @@ import java.io.IOException;
 public class FileManager {
 
     private Menu menu = new Menu();
-    private ReadWrite readWrite;
+    private SequentialFile sequentialFile;
 
     private FileManager(String fileLocation) {
-        readWrite = new ReadWrite(fileLocation);
+        sequentialFile = new SequentialFile(fileLocation);
 
-        menu.add(new OptionReadSearch(readWrite));
-        menu.add(new OptionWriteEnd(readWrite));
-        menu.add(new OptionWriteOverwrite(readWrite));
-        menu.add(new OptionWriteStart(readWrite));
+        menu.add(new OptionReadSearch(sequentialFile));
+        menu.add(new OptionWriteEnd(sequentialFile));
+        menu.add(new OptionOverwrite(sequentialFile));
+        menu.add(new OptionWriteStart(sequentialFile));
         menu.exit();
     }
 

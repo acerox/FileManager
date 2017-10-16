@@ -1,11 +1,11 @@
 package me.acerox.filemanager.option;
 
-import me.acerox.filemanager.ReadWrite;
+import me.acerox.filemanager.SequentialFile;
 
 public class OptionWriteEnd extends Option {
 
-    public OptionWriteEnd(ReadWrite readWrite) {
-        super("Append file to text", readWrite);
+    public OptionWriteEnd(SequentialFile sequentialFile) {
+        super("Append file to text", sequentialFile);
     }
 
     @Override
